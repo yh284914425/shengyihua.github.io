@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="centOS,redis," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Redis是一个高性能的，开源key-value型数据库。是构建高性能，可扩展的Web应用的完美解决方案，可以内存存储亦可持久化存储。因为要使用跨进程，跨服务级别的数据缓存，在对比多个方案后，决定使用Redis。顺便整理下Redis的安装过程，以便查阅。  1 . 下载Redis目前，最新的Redist版本为3.0，使用wget下载，命令如下：12# wget http://download.re">
+<meta name="keywords" content="centOS,redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World 盛宜华">
-<meta property="og:url" content="https://yh284914425.github.io/2018/09/29/hello-world/index.html">
+<meta property="og:title" content="CentOS7下安装和配置redis">
+<meta property="og:url" content="https://yh284914425.github.io/2016/10/04/CentOS7下安装和配置redis/index.html">
 <meta property="og:site_name" content="大盛的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Redis是一个高性能的，开源key-value型数据库。是构建高性能，可扩展的Web应用的完美解决方案，可以内存存储亦可持久化存储。因为要使用跨进程，跨服务级别的数据缓存，在对比多个方案后，决定使用Redis。顺便整理下Redis的安装过程，以便查阅。  1 . 下载Redis目前，最新的Redist版本为3.0，使用wget下载，命令如下：12# wget http://download.re">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-29T03:07:08.784Z">
+<meta property="og:updated_time" content="2018-09-13T11:53:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World 盛宜华">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="CentOS7下安装和配置redis">
+<meta name="twitter:description" content="Redis是一个高性能的，开源key-value型数据库。是构建高性能，可扩展的Web应用的完美解决方案，可以内存存储亦可持久化存储。因为要使用跨进程，跨服务级别的数据缓存，在对比多个方案后，决定使用Redis。顺便整理下Redis的安装过程，以便查阅。  1 . 下载Redis目前，最新的Redist版本为3.0，使用wget下载，命令如下：12# wget http://download.re">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://yh284914425.github.io/2018/09/29/hello-world/"/>
+  <link rel="canonical" href="https://yh284914425.github.io/2016/10/04/CentOS7下安装和配置redis/"/>
 
 
 
 
 
-  <title>Hello World 盛宜华 | 大盛的博客</title>
+  <title>CentOS7下安装和配置redis | 大盛的博客</title>
   
 
 
@@ -292,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yh284914425.github.io/2018/09/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://yh284914425.github.io/2016/10/04/CentOS7下安装和配置redis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Da Sheng">
@@ -309,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World 盛宜华</h1>
+          <h1 class="post-title" itemprop="name headline">CentOS7下安装和配置redis</h1>
         
 
         <div class="post-meta">
@@ -321,8 +322,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-29T09:11:34+08:00">
-                2018-09-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-04T23:52:11+08:00">
+                2016-10-04
               </time>
             
 
@@ -340,8 +341,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/29/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/29/hello-world/" itemprop="commentCount"></span>
+                <a href="/2016/10/04/CentOS7下安装和配置redis/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/10/04/CentOS7下安装和配置redis/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -369,15 +370,31 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>Redis是一个高性能的，开源key-value型数据库。是构建高性能，可扩展的Web应用的完美解决方案，可以内存存储亦可持久化存储。因为要使用跨进程，跨服务级别的数据缓存，在对比多个方案后，决定使用Redis。顺便整理下Redis的安装过程，以便查阅。</p>
+<p> 1 . 下载Redis<br>目前，最新的Redist版本为3.0，使用wget下载，命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># wget http://download.redis.io/releases/redis-3.0.4.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p> 2 . 解压Redis<br>下载完成后，使用tar命令解压下载文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># tar -xzvf redis-3.0.4.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>3 . 编译安装Redis<br>切换至程序目录，并执行make命令编译：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># cd redis-3.0.4</span><br><span class="line"># make</span><br></pre></td></tr></table></figure></p>
+<p>执行安装命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># make install</span><br></pre></td></tr></table></figure></p>
+<p>make install安装完成后，会在/usr/local/bin目录下生成下面几个可执行文件，它们的作用分别是：</p>
+<ul>
+<li>redis-server：Redis服务器端启动程序</li>
+<li>redis-cli：Redis客户端操作工具。也可以用telnet根据其纯文本协议来操作</li>
+<li>redis-benchmark：Redis性能测试工具</li>
+<li>redis-check-aof：数据修复工具</li>
+<li>redis-check-dump：检查导出工具</li>
+</ul>
+<p>备注</p>
+<p>有的机器会出现类似以下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make[1]: Entering directory `/root/redis/src&apos;</span><br><span class="line">You need tcl 8.5 or newer in order to run the Redis test</span><br><span class="line">……</span><br></pre></td></tr></table></figure></p>
+<p>这是因为没有安装tcl导致，yum安装即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install tcl</span><br></pre></td></tr></table></figure></p>
+<p>4 . 配置Redis<br>复制配置文件到/etc/目录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># cp redis.conf /etc/</span><br></pre></td></tr></table></figure></p>
+<p>为了让Redis后台运行，一般还需要修改redis.conf文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/redis.conf</span><br></pre></td></tr></table></figure></p>
+<p>修改daemonize配置项为yes，使Redis进程在后台运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">daemonize yes</span><br></pre></td></tr></table></figure></p>
+<p>5 . 启动Redis<br>配置完成后，启动Redis：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># cd /usr/local/bin</span><br><span class="line"># ./redis-server /etc/redis.conf</span><br></pre></td></tr></table></figure></p>
+<p>检查启动情况：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ps -ef | grep redis</span><br></pre></td></tr></table></figure></p>
+<p>看到类似下面的一行，表示启动成功：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root     18443     1  0 13:05 ?        00:00:00 ./redis-server *:6379</span><br></pre></td></tr></table></figure></p>
+<p>6 . 添加开机启动项<br>让Redis开机运行可以将其添加到rc.local文件，也可将添加为系统服务service。本文使用rc.local的方式，添加service请参考：Redis 配置为 Service 系统服务 。</p>
+<p>为了能让Redis在服务器重启后自动启动，需要将启动命令写入开机启动项：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;/usr/local/bin/redis-server /etc/redis.conf&quot; &gt;&gt;/etc/rc.local</span><br></pre></td></tr></table></figure></p>
+<p>7 . Redis配置参数<br>在 前面的操作中，我们用到了使Redis进程在后台运行的参数，下面介绍其它一些常用的Redis启动参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">daemonize：是否以后台daemon方式运行</span><br><span class="line">pidfile：pid文件位置</span><br><span class="line">port：监听的端口号</span><br><span class="line">timeout：请求超时时间</span><br><span class="line">loglevel：log信息级别</span><br><span class="line">logfile：log文件位置</span><br><span class="line">databases：开启数据库的数量</span><br><span class="line">save * *：保存快照的频率，第一个*表示多长时间，第三个*表示执行多少次写操作。在一定时间内执行一定数量的写操作时，自动保存快照。可设置多个条件。</span><br><span class="line">rdbcompression：是否使用压缩</span><br><span class="line">dbfilename：数据快照文件名（只是文件名）</span><br><span class="line">dir：数据快照的保存目录（仅目录）</span><br><span class="line">appendonly：是否开启appendonlylog，开启的话每次写操作会记一条log，这会提高数据抗风险能力，但影响效率。</span><br><span class="line">appendfsync：appendonlylog如何同步到磁盘。三个选项，分别是每次写都强制调用fsync、每秒启用一次fsync、不调用fsync等待系统自己同步</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -393,6 +410,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/centOS/" rel="tag"># centOS</a>
+          
+            <a href="/tags/redis/" rel="tag"># redis</a>
+          
+        </div>
+      
 
       
       
@@ -402,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/18/从源码分析sentry的错误信息收集/" rel="next" title="从源码分析sentry的错误信息收集">
-                <i class="fa fa-chevron-left"></i> 从源码分析sentry的错误信息收集
+              <a href="/2016/08/08/腾讯云北美服务器搭建ShadowSocks代理/" rel="next" title="腾讯云北美服务器搭建ShadowSocks代理">
+                <i class="fa fa-chevron-left"></i> 腾讯云北美服务器搭建ShadowSocks代理
               </a>
             
           </div>
@@ -411,6 +436,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/11/JS的静态作用域、子程序引用环境与参数传递类型/" rel="prev" title="JS的静态作用域、子程序引用环境与参数传递类型">
+                JS的静态作用域、子程序引用环境与参数传递类型 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -465,17 +494,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -526,22 +546,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
